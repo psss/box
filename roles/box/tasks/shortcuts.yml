@@ -1,0 +1,26 @@
+- name: Keyboard shortcut names
+  dconf:
+    key: "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/{{ item.name }}/name"
+    value: "'{{ item.name }}'"
+    state: present
+  with_items: "{{ shortcuts }}"
+
+- name: Keyboard shortcut bindings
+  dconf:
+    key: "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/{{ item.name }}/binding"
+    value: "'{{ item.binding }}'"
+    state: present
+  with_items: "{{ shortcuts }}"
+
+- name: Keyboard shortcut commands
+  dconf:
+    key: "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/{{ item.name }}/command"
+    value: "'{{ item.command }}'"
+    state: present
+  with_items: "{{ shortcuts }}"
+
+- name: List of custom key bindings
+  dconf:
+    key: /org/gnome/settings-daemon/plugins/media-keys/custom-keybindings
+    value: "[{% for shortcut in shortcuts %}'/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/{{ shortcut.name }}/'{% if not loop.last %}, {% endif %}{% endfor %}]"
+    state: present

@@ -1,0 +1,31 @@
+tools: "/home/psss/git"
+
+shortcuts:
+- name: "shell"
+  binding: "<Alt><Shift>s"
+  command: "gnome-terminal"
+- name: "web"
+  binding: "<Alt><Shift>w"
+  command: "google-chrome"
+- name: "doer"
+  binding: "<Alt><Shift>d"
+  command: "doer"
+- name: "edd"
+  binding: "<Alt><Shift>e"
+  command: "evince"
+
+workspaces:
+- workspace: 1
+  binding: "<Alt><Shift>i"
+- workspace: 2
+  binding: "<Alt><Shift>u"
+- workspace: 3
+  binding: "<Alt><Shift>l"
+- workspace: 4
+  binding: "<Alt><Shift>k"
+- workspace: 5
+  binding: "<Alt><Shift>j"
+- workspace: 6
+  binding: "<Alt><Shift>n"
+- workspace: 7
+  binding: "<Alt><Shift>m"

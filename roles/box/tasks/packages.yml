@@ -1,0 +1,15 @@
+- name: Install system packages
+  become: yes
+  package:
+    state: latest
+    name:
+    - vim
+    - tree
+    - python-pip
+
+- name: Install Python packages
+  become: yes
+  pip:
+    state: present
+    name:
+    - psutil

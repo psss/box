@@ -1,4 +1,0 @@
-- import_playbook: packages.yaml
-- import_playbook: workspaces.yaml
-- import_playbook: shortcuts.yaml
-- import_playbook: tools.yaml

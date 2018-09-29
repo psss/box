@@ -1,0 +1,12 @@
+- name: Fixed number of workspaces
+  dconf:
+    key: /org/gnome/desktop/wm/preferences/num-workspaces
+    value: "{{ workspaces|length }}"
+    state: present
+
+- name: Keyboard shortcuts for switching workspaces
+  dconf:
+    key: "/org/gnome/desktop/wm/keybindings/switch-to-workspace-{{ item.workspace }}"
+    value: "['<Alt><Shift>{{ item.binding }}']"
+    state: present
+  with_items: "{{ workspaces }}"
