@@ -24,3 +24,9 @@
     key: /org/gnome/settings-daemon/plugins/media-keys/custom-keybindings
     value: "[{% for shortcut in shortcuts %}'/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/{{ shortcut.name }}/'{% if not loop.last %}, {% endif %}{% endfor %}]"
     state: present
+
+- name: Switch windows with Alt-Tab
+  dconf:
+    key: /org/gnome/desktop/wm/keybindings/switch-windows=['<Alt>Tab']
+    value: "['<Alt>Tab']"
+    state: present
