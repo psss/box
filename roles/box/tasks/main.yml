@@ -2,3 +2,4 @@
 - import_tasks: workspaces.yml
 - import_tasks: shortcuts.yml
 - import_tasks: tools.yml
+- import_tasks: files.yml

@@ -1,4 +1,5 @@
-tools: "/home/psss/git"
+home: "{{ ansible_env.HOME }}"
+tools: "{{ home }}/git"
 
 shortcuts:
 - name: "shell"

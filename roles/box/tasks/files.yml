@@ -1,0 +1,30 @@
+- name: Directories
+  file:
+    path: "{{ item }}"
+    state: directory
+  with_items:
+    - "{{ home }}/.vim/syntax"
+
+- name: Symlinks
+  file:
+    src: '{{ item.src }}'
+    dest: '{{ home }}/{{ item.dest }}'
+    state: link
+  with_items:
+    - dest: '.bashrc'
+      src: 'git/dot/bash/bashrc'
+    - dest: '.pythonrc.py'
+      src: 'git/dot/python/pythonrc'
+    - dest: '.gitconfig'
+      src: 'git/dot/git/gitconfig'
+    - dest: '.gitignore'
+      src: 'git/dot/git/gitignore'
+    - dest: '.vimrc'
+      src: 'git/dot/vim/vimrc'
+    - dest: '.vim/syntax/text.vim'
+      src: '../../git/dot/vim/text.vim'
+
+- name: Files
+  file:
+    dest: "{{ home }}/.github"
+    src: "{{ home }}/git/dot/git/github"
