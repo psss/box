@@ -12,7 +12,7 @@ shortcuts:
   command: "doer"
 - name: "edd"
   binding: "<Alt><Shift>e"
-  command: "evince"
+  command: "gnome-terminal --command {{ tools }}/edd/edd"
 
 workspaces:
 - workspace: 1
