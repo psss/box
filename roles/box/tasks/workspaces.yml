@@ -1,5 +1,11 @@
 - name: Fixed number of workspaces
   dconf:
+    key: /org/gnome/mutter/dynamic-workspaces
+    value: "false"
+    state: present
+
+- name: Set the number of workspaces
+  dconf:
     key: /org/gnome/desktop/wm/preferences/num-workspaces
     value: "{{ workspaces|length }}"
     state: present
