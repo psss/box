@@ -1,13 +1,12 @@
 - name: Tools directory
   file:
-    path: "{{ tools }}"
+    path: "{{ home }}/git"
     state: directory
 
 - name: Fetch github repositories
   git:
     repo: "git@github.com:psss/{{ item }}.git"
-    dest: "{{ tools }}/{{ item }}"
-    update: no
+    dest: "{{ home }}/git/{{ item }}"
   with_items:
     - box
     - did
