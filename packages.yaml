@@ -1,0 +1,18 @@
+- hosts: localhost
+  become: yes
+  become_user: root
+  tasks:
+
+  - name: Install system packages
+    package:
+      state: latest
+      name:
+      - vim
+      - tree
+      - python-pip
+
+  - name: Install Python packages
+    pip:
+      state: present
+      name:
+      - psutil

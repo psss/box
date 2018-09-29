@@ -1,0 +1,22 @@
+- hosts: localhost
+  gather_facts: no
+  vars:
+    path: /home/psss/git
+  tasks:
+
+  - name: Tools directory
+    file:
+      path: "{{ path }}"
+      state: directory
+
+  - name: Fetch github repositories
+    git:
+      repo: "git@github.com:psss/{{ item }}.git"
+      dest: "{{ path }}/{{ item }}"
+      update: no
+    with_items:
+      - box
+      - did
+      - dots
+      - edd
+      - fmf
