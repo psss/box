@@ -3,13 +3,17 @@
     path: "{{ home }}/git"
     state: directory
 
-- name: Fetch github repositories
+- name: Fetch git repositories
   git:
-    repo: "git@github.com:psss/{{ item }}.git"
-    dest: "{{ home }}/git/{{ item }}"
-  with_items:
-    - box
-    - did
-    - dot
-    - edd
-    - fmf
+    repo: "{{ item.url }}"
+    dest: "{{ home }}/git/{{ item.repo }}"
+  with_items: "{{ repositories }}"
+
+- name: Set git user email
+  git_config:
+    name: user.email
+    value: "{{ item.email }}"
+    repo: "{{ home }}/git/{{ item.repo }}"
+    scope: "local"
+  with_items: "{{ repositories }}"
+  when: "item.email is defined"

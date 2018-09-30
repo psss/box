@@ -29,3 +29,17 @@ workspaces:
   binding: "<Alt><Shift>n"
 - workspace: 7
   binding: "<Alt><Shift>m"
+
+repositories:
+- repo: box
+  url: git@github.com:psss/box.git
+  email: psssssss@gmail.com
+- repo: did
+  url: git@github.com:psss/did.git
+- repo: dot
+  url: git@github.com:psss/dot.git
+  email: psssssss@gmail.com
+- repo: edd
+  url: git@github.com:psss/edd.git
+- repo: fmf
+  url: git@github.com:psss/fmf.git
