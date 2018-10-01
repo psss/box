@@ -7,7 +7,24 @@
     - vim
     - tree
     - python-pip
+
+- name: Install system packages (Debian)
+  become: yes
+  tags: system
+  package:
+    state: latest
+    name:
     - gnome-tweaks
+  when: ansible_os_family == "Debian"
+
+- name: Install system packages (RedHat)
+  become: yes
+  tags: system
+  package:
+    state: latest
+    name:
+    - gnome-tweak-tool
+  when: ansible_os_family == "RedHat"
 
 - name: Install Python packages
   become: yes
