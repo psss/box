@@ -13,6 +13,9 @@ shortcuts:
 - name: "edd"
   binding: "<Alt><Shift>e"
   command: "gnome-terminal --command {{ home }}/git/edd/edd"
+- name: "firefox"
+  binding: "<Alt><Shift>f"
+  command: "firefox"
 
 workspaces:
 - workspace: 1
