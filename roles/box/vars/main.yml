@@ -3,7 +3,7 @@ home: "{{ ansible_env.HOME }}"
 shortcuts:
 - name: "shell"
   binding: "<Alt><Shift>s"
-  command: "gnome-terminal"
+  command: "gnome-terminal --geometry 120x40+400+200"
 - name: "web"
   binding: "<Alt><Shift>w"
   command: "google-chrome"
