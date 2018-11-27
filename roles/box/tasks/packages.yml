@@ -15,6 +15,7 @@
     state: latest
     name:
     - gnome-tweaks
+    - virtualenvwrapper
   when: ansible_os_family == "Debian"
 
 - name: Install system packages (RedHat)
@@ -24,6 +25,7 @@
     state: latest
     name:
     - gnome-tweak-tool
+    - python-virtualenvwrapper
   when: ansible_os_family == "RedHat"
 
 - name: Install Python packages
