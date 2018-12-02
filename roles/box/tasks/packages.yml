@@ -8,6 +8,12 @@
     - tree
     - python-pip
 
+- name: Keep the system updated
+  become: yes
+  package:
+    name: '*'
+    state: latest
+
 - name: Install system packages (Debian)
   become: yes
   tags: system
