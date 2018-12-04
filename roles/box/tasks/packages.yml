@@ -6,6 +6,7 @@
     name:
     - vim
     - tree
+    - meld
     - python-pip
 
 - name: Keep the system updated
