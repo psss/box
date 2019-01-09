@@ -4,10 +4,12 @@
   package:
     state: latest
     name:
+    - gcc
     - vim
     - tree
     - meld
     - python-pip
+    - xclip
 
 - name: Keep the system updated
   become: yes
@@ -33,6 +35,8 @@
     name:
     - gnome-tweak-tool
     - python-virtualenvwrapper
+    - krb5-workstation
+    - pidgin
   when: ansible_os_family == "RedHat"
 
 - name: Install Python packages
