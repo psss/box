@@ -33,11 +33,15 @@
   package:
     state: latest
     name:
+    - copr-cli
     - gnome-tweak-tool
-    - python-virtualenvwrapper
     - krb5-workstation
     - pidgin
+    - python-virtualenvwrapper
     - python3-devel
+    - python3-docutils
+    - python3-pytest
+    - rpm-build
   when: ansible_os_family == "RedHat"
 
 - name: Install Python packages
