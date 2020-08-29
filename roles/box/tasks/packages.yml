@@ -8,7 +8,7 @@
     - vim
     - tree
     - meld
-    - python-pip
+    - python3-pip
     - xclip
 
 - name: Keep the system updated
