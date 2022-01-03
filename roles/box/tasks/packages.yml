@@ -5,10 +5,11 @@
     state: latest
     name:
     - gcc
-    - vim
-    - tree
+    - glances
     - meld
     - python3-pip
+    - tree
+    - vim
     - xclip
 
 - name: Keep the system updated
@@ -33,15 +34,21 @@
   package:
     state: latest
     name:
+    - beakerlib
     - copr-cli
+    - fedpkg
     - gnome-tweak-tool
+    - jetbrains-mono-fonts
     - krb5-workstation
     - pidgin
-    - python-virtualenvwrapper
     - python3-devel
     - python3-docutils
+    - python3-mock
     - python3-pytest
+    - python3-virtualenvwrapper
     - rpm-build
+    - tmt-all
+    - virt-manager
   when: ansible_os_family == "RedHat"
 
 - name: Install Python packages
