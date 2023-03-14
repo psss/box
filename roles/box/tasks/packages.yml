@@ -39,7 +39,9 @@
     - fedpkg
     - gnome-tweak-tool
     - jetbrains-mono-fonts
+    - jq
     - krb5-workstation
+    - linkchecker
     - pidgin
     - python3-devel
     - python3-docutils
@@ -47,6 +49,7 @@
     - python3-pytest
     - python3-virtualenvwrapper
     - rpm-build
+    - rubygem-asciidoctor
     - tmt-all
     - virt-manager
   when: ansible_os_family == "RedHat"
