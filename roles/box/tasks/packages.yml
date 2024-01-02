@@ -36,11 +36,14 @@
     name:
     - beakerlib
     - copr-cli
+    - did
     - fedpkg
+    - gh
     - gnome-tweak-tool
     - jetbrains-mono-fonts
     - jq
     - krb5-workstation
+    - krb5-devel
     - linkchecker
     - pidgin
     - python3-devel
